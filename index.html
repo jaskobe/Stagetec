@@ -34,22 +34,41 @@
 
 <!--样式-->
 <link rel="stylesheet" href="./css/swiper.min.css">
-<link rel="stylesheet" href="./css/animate.min.css">
+<link rel="stylesheet" href="./css/animate.css">
 <link rel="stylesheet" href="./css/index.css">
 <!--内容-->
 <section class="banner-part swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide banner-1">
             <div class="container">
-                <aside class="part-txt light">
+                <aside class="part-txt light ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
                     <h2>执著之心，极致之美</h2>
                     <a href="#" class="aside-btn">了解更多</a>
                 </aside>
             </div>
         </div>
-        <div class="swiper-slide banner-2"></div>
-        <div class="swiper-slide banner-3">Slide 3</div>
-        <div class="swiper-slide banner-4">Slide 3</div>
+        <div class="swiper-slide banner-2">
+            <div class="container">
+                <aside class="part-txt light ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                    <h2>执著之心，极致之美</h2>
+                    <a href="#" class="aside-btn">了解更多</a>
+                </aside>
+            </div>
+        </div>
+        <div class="swiper-slide banner-3"><div class="container">
+                <aside class="part-txt light ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                    <h2>执著之心，极致之美</h2>
+                    <a href="#" class="aside-btn">了解更多</a>
+                </aside>
+            </div></div>
+        <div class="swiper-slide banner-4">
+             <div class="container">
+                <aside class="part-txt light ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                    <h2>执著之心，极致之美</h2>
+                    <a href="#" class="aside-btn">了解更多</a>
+                </aside>
+            </div>
+        </div>
     </div>
     <!--分页器 -->
     <div class="swiper-pagination"></div>
@@ -58,26 +77,33 @@
     <div class="container">
         <ul class="row">
             <li class="col-md-4 trait">
-                <img src="./img/index/trait-tech.png" alt="领先的技术">
-                <div class="trait-txt">
-                    <h3>领先的技术</h3>
-                    <p>Advanced Technology</p>
+               <div class="trait-box">
+                    <img src="./img/index/trait-tech.png" alt="领先的技术">
+                    <div class="trait-txt">
+                        <h3>领先的技术</h3>
+                        <p>Advanced Technology</p>
+                    </div>
+               </div>
+            </li>
+            <li class="col-md-4 trait">
+                <div class="trait-box">
+                    <img src="./img/index/trait-qua.png" alt="德国的品质">
+                    <div class="trait-txt">
+                        <h3>德国的品质</h3>
+                        <p>German Quality </p>
+                    </div>
                 </div>
             </li>
             <li class="col-md-4 trait">
-                <img src="./img/index/trait-qua.png" alt="德国的品质">
-                <div class="trait-txt">
-                    <h3>德国的品质</h3>
-                    <p>German Quality </p>
+                <div class="trait-box">
+                    <img src="./img/index/trait-heart.png" alt="德国的品质">
+                    <div class="trait-txt">
+                        <h3>真诚的服务</h3>
+                        <p>Sincere Service</p>
+                    </div>
                 </div>
             </li>
-            <li class="col-md-4 trait">
-                <img src="./img/index/trait-heart.png" alt="真诚的服务">
-                <div class="trait-txt">
-                    <h3>真诚的服务</h3>
-                    <p>Sincere Service</p>
-                </div>
-            </li>
+    
         </ul>
     </div>
 </section>
@@ -104,25 +130,33 @@
 
 <section class="index-card-part"> 
     <ul>
-        <li class="col-md-3 col-sm-6 index-card">
-            <a href="#" class="card-txt">
-                公司介绍
-            </a>
+        <li class="col-md-3 col-sm-6">
+            <div class="index-card">
+                <a href="#" class="card-txt">
+                    公司介绍
+                </a>
+            </div>
         </li>
-        <li class="col-md-3 col-sm-6 index-card">
-            <a href="#" class="card-txt">
-                新闻动态
-            </a>
+        <li class="col-md-3 col-sm-6">
+            <div class="index-card">
+                <a href="#" class="card-txt">
+                    公司介绍
+                </a>
+            </div>
         </li>
-        <li class="col-md-3 col-sm-6 index-card">
-            <a href="#" class="card-txt">
-                下载中心
-            </a>
+        <li class="col-md-3 col-sm-6">
+            <div class="index-card">
+                <a href="#" class="card-txt">
+                    公司介绍
+                </a>
+            </div>
         </li>
-        <li class="col-md-3 col-sm-6 index-card">
-            <a href="#" class="card-txt">
-                技术服务
-            </a>
+        <li class="col-md-3 col-sm-6">
+            <div class="index-card">
+                <a href="#" class="card-txt">
+                    公司介绍
+                </a>
+            </div>
         </li>
 
     </ul>
@@ -138,11 +172,12 @@
     </div>
 </section>
 <!--js-->
-<script src="./js/swiper-animate.js"></script>
+<script src="./js/swiper.jquery.min.js"></script>
+<script src="./js/swiper.animate.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
   var mySwiper = new Swiper ('.swiper-container', {
-    loop: true,
+    // loop: true,
     pagination: '.swiper-pagination',
     paginationClickable :true,
     keyboardControl : true,
